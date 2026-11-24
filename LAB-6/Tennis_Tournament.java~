@@ -1,0 +1,14 @@
+public class Tennis_Tournament extends Tournament
+{
+  public int team = 0;
+  public Tennis_Tournament(String name, int team)
+  {
+    super();
+    super(name);
+  }
+  public void info()
+  {
+    System.out.println("Tennis Tournament Name: "+super.getName());
+    System.out.println("Number of Teams: "+this.team);
+  }
+}

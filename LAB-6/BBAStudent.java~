@@ -1,0 +1,12 @@
+public class BBAStudent
+{
+  public String department = BBA;
+  public BBAStudent()
+  {
+    super.setName(Default);
+  }
+  public BBAStudent(String name)
+  {
+    super.setName(name);
+  }
+}

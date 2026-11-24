@@ -1,0 +1,17 @@
+public class Dog extends Animal
+{
+  public String breed = "";
+  public Dog(String name, int age, String color, String breed)
+  {
+    super(name, age, color);
+    this.breed = breed;
+  }
+  public void makeSound()
+  {
+    System.out.println(color+" color "+name+" is barking");
+  }
+  public String dogInfo()
+  {
+    return "Name: "+name+"\nAge: "+age+"\nColor: "+color+"\nBreed: "+breed;
+  }
+}
