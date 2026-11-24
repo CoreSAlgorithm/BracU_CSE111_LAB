@@ -1,0 +1,26 @@
+public class warriorOne extends GameCharacter
+{
+  public int strength = 0;
+  public int armor = 0;
+  public class(String characterName, int level, int strength, int armor, String weapon)
+  {
+    super(characterName,level,weapon);
+    this.strength = strength;
+    this.armor = armor;
+    System.out.println("A new warrior has arrived.");
+    super.allCharacters[count] = characterName;
+    super.count++;
+  }
+  public void calculateDamage() 
+  {
+    totalDamage = (double)((getLevel()*strength) + (armor*50));
+  }
+  public String toString()
+  {
+    getCharacterInfo();
+    System.out.println("Character type: Warrior ");
+    System.out.println("Weapon: "+weaponType);
+    System.out.println("Strength: "+strength+", Armor: "+armor);
+    System.out.println("Total damage: "+totalDamage);
+  }
+}

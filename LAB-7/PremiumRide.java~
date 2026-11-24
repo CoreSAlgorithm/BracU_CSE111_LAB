@@ -1,0 +1,46 @@
+public class PremiumRide extends Ride
+{
+  public boolean surge;
+  private static id = 0; 
+  public boolean discount;
+  public double fare;
+  public PremiumRide(int distance, boolean surge)
+  {
+    this.surge = surge;
+    super(distance);
+    id++;
+  }
+  public int getId()
+  {
+    return id;
+  }
+  public int toString()
+  {
+    return ("Distance: "+getDistance()+" km")
+      +("ID: "+id+"-"+getDistance())
+      +("Service Charge: 50")
+      +("Surge: "+surge)
+      +("Discount: "+discount);
+  }
+  public double calculateFare()
+  {
+    fare = getDistance()*10;
+    fare += (fare * 20)/100.0;
+    if(surge == true)
+    {
+      fare += fare*0.2;
+    }
+    return fare;
+  }
+  public double calculateFare(int amount)
+  {
+    fare = getDistance()*10;
+    fare += (fare * 20)/100.0;
+    if(surge == true)
+    {
+      fare += fare*0.2;
+    }
+    discount = true;
+    return (fare-amount); 
+  }
+}

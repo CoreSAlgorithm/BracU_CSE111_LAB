@@ -1,0 +1,26 @@
+public class mageOne extends GameCharacter
+{
+  public int intelligence = 0;
+  public int mana = 0;
+  public class(String characterName, int level, int intelligence, int mana, String weapon)
+  {
+    super(characterName,level,weapon);
+    this.intelligence = intelligence;
+    this.armor = armor;
+    System.out.println("A new mage came to live.");
+    super.allCharacters[count] = characterName;
+    super.count++;
+  }
+  public void calculateDamage()
+  {
+    totalDamage = (double)((level*intelligence) + (mana*10));
+  }
+  public String toString()
+  {
+    getCharacterInfo();
+    System.out.println("Character type: Mage ");
+    System.out.println("Weapon: "+weaponType);
+    System.out.println("Intelligence: "+intelligence+", Mana: "+mana);
+    System.out.println("Total damage: "+totalDamage);
+  }
+}

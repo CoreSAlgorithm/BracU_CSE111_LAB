@@ -1,0 +1,100 @@
+public class CinemexTicket extends MovieTicket
+{
+  public String genre = "";
+  public static int TotalTickets = 0;
+  public String status = "Not Paid";
+  public CinemexTicket(String movie, String showtime, String genre, String date)
+  {
+    MovieTicket(movie,date,showtime);
+    this.genre = genre;
+    super.seat = "Regular";
+    TotalTickets++;
+  }
+  public CinemexTicket(String movie, String showtime, String genre, String date,String seat)
+  {
+    MovieTicket(movie,date,showtime);
+    this.genre = genre;
+    super.seat = seat;
+    TotalTickets++;
+  }
+  public MovieTicket(String movie, String date, String showtime)
+  {
+    super.movie = movie;
+    super.date= date;
+    super.showtime = showtime;
+  }
+  public static int getTotalTickets()
+  {
+    return TotalTickets;
+  }
+  public void calculateTicketPrice()
+  {
+    if(showtime.split() => '18' || Integer.parseInt(time[0]) <= '23')
+    {
+      if(seat.equals(Regular))
+      {
+        setPrice(300.0+(300.0*0.15));
+      }
+      else if(seat.equals(Premium))
+      {
+        setPrice(450.0+(450.0*0.15));
+      }
+      else if(seat.equals(IMAX 3D))
+      {
+        setPrice(600.0+(600.0*0.15));
+      }
+    }
+    else
+    {
+      if(seat.equals(Regular))
+      {
+        setPrice(300.0);
+      }
+      else if(seat.equals(Premium))
+      {
+        setPrice(450.0);
+      }
+      else if(seat.equals(IMAX 3D))
+      {
+        setPrice(600.0);
+      }
+    }
+    System.out.println("Ticket price is calculated successfully.");
+  }
+  public String split()
+  {
+    public String[] time = super.showtime.split(":");
+    int hour = Integer.parseInt(time[0]);
+    int minute = Integer.parseInt(time[1]);
+    return hour;
+  }
+  public String toString()
+  {
+    public String id = "";
+    if(seat.equals(Regular))
+    {
+      id = getMovie()+"-R-"+TotalTickets;
+    }
+    else if(seat.equals(Premium))
+    {
+      id = getMovie()+"-P-"+TotalTickets;
+    }
+    else if(seat.equals(IMAX 3D))
+    {
+      id = getMovie()+"-I-"+TotalTickets;
+    }
+    return "Ticket ID: "+id
+      +"\nMovie: "+getMovie()
+      +"\nShowtime: "+showtime
+      +"\nDate: "+date
+      +"\nGenre: "+genre
+      +"\nSeat Type: "+seat
+      +"\nPrice: "+getPrice()
+      +"\nStatus: "+status;
+  }
+  public void confirmPayment()
+  {
+    status = "Paid";
+    System.out.println("Payment Successful");
+  }
+}

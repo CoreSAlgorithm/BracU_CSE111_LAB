@@ -1,0 +1,10 @@
+public class Electronics extends Product
+{
+  public int size = 0;
+  public Electronics(String productName, double price, int size)
+  {
+    super(productName,price);
+    this.size = size;
+    super.totalProducts ++;
+  }
+}
